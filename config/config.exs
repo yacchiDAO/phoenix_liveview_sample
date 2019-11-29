@@ -9,6 +9,7 @@ use Mix.Config
 
 # Configures the endpoint
 config :liveview_sample, LiveviewSampleWeb.Endpoint,
+  live_view: [signing_salt: "N7dTotMJbEi8cXG/Y8O599wRhPUW21FP"],
   url: [host: "localhost"],
   secret_key_base: "wmeidvuX9U/r7bg5I4VKN2NC5bOihQ2pzhUaqKvYI376Pzu7gNWToXE/jMdwq9PU",
   render_errors: [view: LiveviewSampleWeb.ErrorView, accepts: ~w(html json)],
