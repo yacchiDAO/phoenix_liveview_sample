@@ -8,6 +8,7 @@ defmodule LiveviewSampleWeb.Router do
     plug Phoenix.LiveView.Flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug :put_layout, { LiveviewSampleWeb.LayoutView, :app }
   end
 
   pipeline :api do
@@ -18,6 +19,7 @@ defmodule LiveviewSampleWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/realtime", QiitaSearchRealtime
   end
 
   # Other scopes may use custom stacks.
