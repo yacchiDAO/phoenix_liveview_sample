@@ -49,6 +49,8 @@ config :liveview_sample, LiveviewSampleWeb.Endpoint,
 config :liveview_sample, LiveviewSampleWeb.Endpoint,
   live_reload: [
     patterns: [
+      ~r{lib/liveview_sample_web/live/.*(ex)$},
+      ~r{lib/liveview_sample_web/templates/.*(leex)$},
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/liveview_sample_web/{live,views}/.*(ex)$",
